@@ -25,13 +25,13 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="lastname">Last Name</label>
-                                <input type="text" class="form-control" name="lastname">
+                                <input type="text" id="lastname" class="form-control" name="lastname" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="firstname">First Name</label>
-                                <input type="text" class="form-control" name="firstname">
+                                <input type="text" id="firstname" class="form-control" name="firstname" required>
                             </div>
                         </div>
                     </div>
@@ -40,38 +40,38 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="contactNum">Contact Number</label>
-                                <input type="tel" class="form-control" name="contactNum">
+                                <input type="tel" id="contactNum" class="form-control" name="contactNum" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="email">Email Address</label>
-                                <input type="email" class="form-control" name="email">
+                                <input type="email" id="email" class="form-control" name="email" required>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="nric">NRIC/Passport Number</label>
-                        <input type="text" class="form-control" name="nric">
+                        <input type="text" id="nric" class="form-control" name="nric" required>
                     </div>
 
                     <div class="form-group">
                         <label for="address">Address Line</label>
-                        <input type="text" class="form-control" name="address">
+                        <input type="text" id="address" class="form-control" name="address">
                     </div>
 
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="city">City</label>
-                                <input type="text" class="form-control" name="city">
+                                <input type="text" id="city" class="form-control" name="city" required>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="state">State</label>
-                                <input type="text" class="form-control" name="state">
+                                <input type="text" id="state" class="form-control" name="state" required>
                             </div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="country">Country</label>
-                                <select class="form-control" name="country">
+                                <select class="form-control" id="country" name="country" required>
                                     <option value='Ascension Island'>Ascension Island</option>
                                     <option value='Andorra'>Andorra</option>
                                     <option value='United Arab Emirates'>United Arab Emirates</option>
@@ -346,16 +346,20 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="zipcode">Zip Code</label>
-                                <input type="number" class="form-control" name="zipcode">
+                                <input type="text" id="zipcode" class="form-control" name="zipcode" required>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <input type="submit" value="Next">
+                            <button id="next" name="next">Next</button>
                         </div>
 
                     </div>
 
+                </div>
+
+                <div class="col-lg-4">
+                    
                 </div>
             </div>
         </form>
