@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    $('#next').click(function(){
+    $('#next').on('click', function(e){
+        e.preventDefault();
+        // var submitForm = $('#formSubmit').serializeArray();
         var lastname = $('#lastname').val();
         var firstname = $('#firstname').val();
         var contactNum = $('#contactNum').val();
@@ -10,10 +12,11 @@ $(document).ready(function(){
         var state = $('#state').val();
         var country = $('#country').val();
         var zipcode = $('#zipcode').val();
-
-
+        
         $.ajax({
-            type: "POST",
+            dataType: "html",
+            type: 'POST',
+            url: "preview.php",
             data: {
                 lname:lastname,
                 fname:firstname,
@@ -26,10 +29,9 @@ $(document).ready(function(){
                 country:country,
                 zipcode:zipcode
             },
-            url: "preview.php",
-            dataType: "html",
-            success: function(data) {
-                
+            success: function (response) {
+                $('#formSubmit').hide();
+                $('.result').append(response);
             }
         });
     });

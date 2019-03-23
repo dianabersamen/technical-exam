@@ -11,10 +11,8 @@
 </head>
 <body>
 
-    <?php include_once 'config/database.php'; ?>
-
     <div class="container">
-        <form action="previewForm.php">
+        <form id="formSubmit">
             <h2>Enter Your Personal Information Below </h2>
             <h5>Please fill up the fields below correctly</h5>
 
@@ -25,13 +23,13 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="lastname">Last Name</label>
-                                <input type="text" id="lastname" class="form-control" name="lastname" required>
+                                <input type="text" id="lastname" class="form-control" name="lastname" value="">
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="firstname">First Name</label>
-                                <input type="text" id="firstname" class="form-control" name="firstname" required>
+                                <input type="text" id="firstname" class="form-control" name="firstname" >
                             </div>
                         </div>
                     </div>
@@ -40,20 +38,20 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="contactNum">Contact Number</label>
-                                <input type="tel" id="contactNum" class="form-control" name="contactNum" required>
+                                <input type="tel" id="contactNum" class="form-control" name="contactNum" >
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="email">Email Address</label>
-                                <input type="email" id="email" class="form-control" name="email" required>
+                                <input type="email" id="email" class="form-control" name="email" >
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="nric">NRIC/Passport Number</label>
-                        <input type="text" id="nric" class="form-control" name="nric" required>
+                        <input type="text" id="nric" class="form-control" name="nric" >
                     </div>
 
                     <div class="form-group">
@@ -65,13 +63,13 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="city">City</label>
-                                <input type="text" id="city" class="form-control" name="city" required>
+                                <input type="text" id="city" class="form-control" name="city" >
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="state">State</label>
-                                <input type="text" id="state" class="form-control" name="state" required>
+                                <input type="text" id="state" class="form-control" name="state" >
                             </div>
                         </div>
                     </div>
@@ -80,7 +78,7 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="country">Country</label>
-                                <select class="form-control" id="country" name="country" required>
+                                <select class="form-control" id="country" name="country" >
                                     <option value='Ascension Island'>Ascension Island</option>
                                     <option value='Andorra'>Andorra</option>
                                     <option value='United Arab Emirates'>United Arab Emirates</option>
@@ -346,12 +344,12 @@
                         <div class="col-lg-6">
                             <div class="form-group">
                                 <label for="zipcode">Zip Code</label>
-                                <input type="text" id="zipcode" class="form-control" name="zipcode" required>
+                                <input type="text" id="zipcode" class="form-control" name="zipcode" >
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <button id="next" name="next">Next</button>
+                            <button class="btn btn-default" type="submit" id="next" >Next</button>
                         </div>
 
                     </div>
@@ -363,12 +361,16 @@
                 </div>
             </div>
         </form>
+
+        <div class="result">
+        </div>
     </div>
     
     <footer>
-    
+        
         <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+        <script src="custom.js"></script>
     </footer>
     
 </body>
